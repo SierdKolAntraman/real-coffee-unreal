@@ -18,11 +18,118 @@
 "name": "Espresso",
 "category": "Coffee",
 "price": 2.50,
-"stock": 20,
+"stock": 30,
 "decription": "A short, strong coffee served as a single shot."
 
- }
+ },
 
+ 
+ {
+ 
+ "id": 3,
+ "name": "Americano",
+ "category": "Coffee",
+ "price": 3.90,
+ "stock": 35,
+ "decription": "Espresso, with hot water for a smooth black coffee."
+ 
+  },
+
+ 
+ {
+ 
+ "id": 4,
+ "name": "Cappuccino",
+ "category": "Coffee",
+ "price": 4.50,
+ "stock": 40,
+ "decription": "Espresso with steamed milk and light layer of foam."
+ 
+  },
+
+{
+ "id": 5,
+  "name": "Latte",
+  "category": "Coffee",
+  "price": 4.50,
+  "stock": 40,
+  "decription": "Espresso with steamed more milk and a thick layer of foam"
+  
+   },
+
+{
+ "id": 6,
+  "name": "Water",
+  "category": "Soft Drink",
+  "price": 1.50,
+  "stock": 40,
+  "decription": "Still bottled water."
+  
+ },
+
+{
+"id": 7,
+ "name": "Sparkling water",
+ "category": "Soft Drink",
+ "price": 1.80,
+ "stock": 30,
+ "decription": "Chilled sparkling bottled water."
+ 
+  },
+  
+{
+ "id": 8,
+  "name": "Cola",
+  "category": "Soft Drink",
+  "price": 2.50,
+  "stock": 30,
+  "decription": "Chilled classic cola."
+  
+   },
+
+ {  
+"id": 9,
+ "name": "Lemonade",
+ "category": "Soft Drink",
+ "price": 2.20,
+ "stock": 25,
+ "decription": "Chilled sparkling lemonade."
+ 
+  },
+
+{
+
+"id": 10,
+ "name": "Baklava",
+ "category": "Dessert",
+ "price": 3.50,
+ "stock": 30,
+ "decription": "Famous Turkish traditional filo pastry with pistachio."
+ 
+  },
+
+{
+
+"id": 11,
+ "name": "Cheesecake",
+ "category": "Dessert",
+ "price": 4.20,
+ "stock": 15,
+ "decription": "A creamy slice of baked cheeseecake."
+ 
+  },
+
+{
+
+"id": 12,
+ "name": "Sutlac",
+ "category": "Dessert",
+ "price": 3.90,
+ "stock": 15,
+ "decription": "Traditional Turkish rice pudding with cinnamon."
+ 
+  }
+  
 
 ]
 
