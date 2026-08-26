@@ -7,9 +7,22 @@
 "category": "Coffee",
 "price": 3.50,
 "stock": 20,
-"decription": "Traditional finely grounded coffee, served in a Turkish espresso cup."
+"decription": "Traditional finely grounded coffee, served in a Turkish fincan."
+
+ },
+
+
+{
+
+"id": 2,
+"name": "Espresso",
+"category": "Coffee",
+"price": 2.50,
+"stock": 20,
+"decription": "A short, strong coffee served as a single shot."
 
  }
+
 
 ]
 
