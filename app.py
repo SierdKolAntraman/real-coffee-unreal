@@ -39,20 +39,21 @@ def show_main_menu():
     print("2. View coffee")
     print("3. View soft drinks")
     print("4. View desserts")
-    print("5. Exit")
+    print("5. Order product")
+    print("6. Exit")
 
 
 def main():
 
     products = load_products()
-
+    basket = []
     while True:
         show_main_menu()
-        choice = input("Choose an option (1-5): ")
+        choice = input("Choose an option (1-6): ")
 
         if choice == "1":
             display_menu(products, "Full Menu")
-            detail_choice = input("Enter product number for details, or press Enter to return: ")
+            detail_choice = input("\nEnter product number for details, or press Enter to return:\n")
 
             if detail_choice.isdigit():
                 product_id = int(detail_choice)
@@ -76,6 +77,24 @@ def main():
             display_menu(dessert, "Desserts Menu")
 
         elif choice == "5":
+                     display_menu(products, "Order Menu")
+
+                     order_choice = input("\nEnter product number to add to basket: ")
+
+                     if order_choice.isdigit():
+                         product_id = int(order_choice)
+
+                         for product in products:
+                             if product["id"] == product_id:
+                                 basket.append(product)
+                                 print(f"\nAdded {product['name']} to your basket.")
+                                 break
+                         else:
+                             print("\nInvalid product number. Please choose a product from the menu.")
+                     else:
+                         print("\nPlease enter a whole product number.")
+                
+        elif choice == "6":
             print("\nThank you for visiting Real Coffee Unreal. Goodbye!")
             break
 
