@@ -22,16 +22,40 @@ def display_product_details(product):
     print(f"Price: {product['price']:.2f}")
     print(f"Description: {product['description']}")
 
+
+def review_basket(basket):
+    if not basket:
+        print("\nYour basket is empty.")
+        return
+
+    counts = {}
+    total = 0.0
+
+    for product in basket:
+        product_id = product["id"]
+        counts[product_id] = counts.get(product_id, 0) + 1
+        total += product["price"]
+
+    print("\n--- Your Basket ---")
+    for product_id, quantity in counts.items():
+        for product in basket:
+            if product["id"] == product_id:
+                line_total = quantity * product["price"]
+                print(f"{quantity} x {product['name']} @ €{product['price']:.2f} = €{line_total:.2f}")
+                break
+
+    print(f"\nTotal: €{total:.2f}")
     
 
-def filter_by_category(products, category):
 
+def filter_by_category(products, category):
     filtered_products = []
     
     for product in products:
         if product["category"] == category:
             filtered_products.append(product)
     return product
+
 
 def show_main_menu():
     print("\n=== Real Coffee Unreal ===")
@@ -40,7 +64,8 @@ def show_main_menu():
     print("3. View soft drinks")
     print("4. View desserts")
     print("5. Order product")
-    print("6. Exit")
+    print("6. Review basket")
+    print("7. Exit")
 
 
 def main():
@@ -93,8 +118,11 @@ def main():
                              print("\nInvalid product number. Please choose a product from the menu.")
                      else:
                          print("\nPlease enter a whole product number.")
-                
+
         elif choice == "6":
+            review_basket(basket)
+                    
+        elif choice == "7":
             print("\nThank you for visiting Real Coffee Unreal. Goodbye!")
             break
 
