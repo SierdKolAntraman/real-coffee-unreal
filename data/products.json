@@ -7,7 +7,7 @@
 "category": "Coffee",
 "price": 3.50,
 "stock": 20,
-"decription": "Traditional finely grounded coffee, served in a Turkish fincan."
+"description": "Traditional finely grounded coffee, served in a Turkish fincan."
 
  },
 
@@ -19,7 +19,7 @@
 "category": "Coffee",
 "price": 2.50,
 "stock": 30,
-"decription": "A short, strong coffee served as a single shot."
+"description": "A short, strong coffee served as a single shot."
 
  },
 
@@ -31,7 +31,7 @@
  "category": "Coffee",
  "price": 3.90,
  "stock": 35,
- "decription": "Espresso, with hot water for a smooth black coffee."
+ "description": "Espresso, with hot water for a smooth black coffee."
  
   },
 
@@ -43,7 +43,7 @@
  "category": "Coffee",
  "price": 4.50,
  "stock": 40,
- "decription": "Espresso with steamed milk and light layer of foam."
+ "description": "Espresso with steamed milk and light layer of foam."
  
   },
 
@@ -53,7 +53,7 @@
   "category": "Coffee",
   "price": 4.50,
   "stock": 40,
-  "decription": "Espresso with steamed more milk and a thick layer of foam"
+  "description": "Espresso with steamed more milk and a thick layer of foam"
   
    },
 
@@ -63,7 +63,7 @@
   "category": "Soft Drink",
   "price": 1.50,
   "stock": 40,
-  "decription": "Still bottled water."
+  "description": "Still bottled water."
   
  },
 
@@ -73,7 +73,7 @@
  "category": "Soft Drink",
  "price": 1.80,
  "stock": 30,
- "decription": "Chilled sparkling bottled water."
+ "description": "Chilled sparkling bottled water."
  
   },
   
@@ -83,7 +83,7 @@
   "category": "Soft Drink",
   "price": 2.50,
   "stock": 30,
-  "decription": "Chilled classic cola."
+  "description": "Chilled classic cola."
   
    },
 
@@ -93,7 +93,7 @@
  "category": "Soft Drink",
  "price": 2.20,
  "stock": 25,
- "decription": "Chilled sparkling lemonade."
+ "description": "Chilled sparkling lemonade."
  
   },
 
@@ -104,7 +104,7 @@
  "category": "Dessert",
  "price": 3.50,
  "stock": 30,
- "decription": "Famous Turkish traditional filo pastry with pistachio."
+ "description": "Famous Turkish traditional filo pastry with pistachio."
  
   },
 
@@ -115,7 +115,7 @@
  "category": "Dessert",
  "price": 4.20,
  "stock": 15,
- "decription": "A creamy slice of baked cheeseecake."
+ "description": "A creamy slice of baked cheeseecake."
  
   },
 
@@ -126,7 +126,7 @@
  "category": "Dessert",
  "price": 3.90,
  "stock": 15,
- "decription": "Traditional Turkish rice pudding with cinnamon."
+ "description": "Traditional Turkish rice pudding with cinnamon."
  
   }
   

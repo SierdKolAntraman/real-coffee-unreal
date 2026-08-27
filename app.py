@@ -15,6 +15,15 @@ def display_menu(products, title):
             f"(Stock: {product['stock']})"
         ) 
 
+def display_product_details(product):
+    print(f"\n--- Product Details ---")
+    print(f"Name: {product['name']}")
+    print(f"Category: {product['category']}")
+    print(f"Price: {product['price']:.2f}")
+    print(f"Description: {product['description']}")
+
+    
+
 def filter_by_category(products, category):
 
     filtered_products = []
@@ -43,6 +52,15 @@ def main():
 
         if choice == "1":
             display_menu(products, "Full Menu")
+            detail_choice = input("Enter product number for details, or press Enter to return: ")
+
+            if detail_choice.isdigit():
+                product_id = int(detail_choice)
+
+                for product in products:
+                    if product["id"] == product_id:
+                        display_product_details(product)
+                        break
 
         elif choice == "2":
             coffee = [product for product in products if product["category"] == "Coffee"]
