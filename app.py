@@ -45,16 +45,17 @@ def main():
             display_menu(products, "Full Menu")
 
         elif choice == "2":
-            coffee = filter_by_category(products, "Coffee")
+            coffee = [product for product in products if product["category"] == "Coffee"]
+           # print(coffee)
             display_menu(coffee, "Coffee Menu")
 
         elif choice == "3":
-            soft_drinks =  filter_by_category(products, "Soft Drink")
-            display_menu(soft_drinks, "Soft Drink Menu")
+            soft_drink = [product for product in products if product["category"] == "Soft Drink"]
+            display_menu(soft_drink, "Soft Drink Menu")
 
         elif choice == "4":
-            desserts = filter_by_category(products, "Dessert")
-            display_menu(desserts, "Desserts Menu")
+            dessert = [product for product in products if product["category"] == "Dessert"]
+            display_menu(dessert, "Desserts Menu")
 
         elif choice == "5":
             print("\nThank you for visiting Real Coffee Unreal. Goodbye!")
