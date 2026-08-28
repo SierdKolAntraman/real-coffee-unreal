@@ -45,6 +45,18 @@ def review_basket(basket):
                 break
 
     print(f"\nTotal: €{total:.2f}")
+
+def checkout(basket):
+    if not basket:
+        print(f"Your basket is empty.")
+        return
+
+    confirm = input("\nConfirm order? (y/n): ").strip().lower()
+    if confirm == "y":
+        print("\nOrder confirmed! Thank you for choosing Real Coffee Unreal.")
+        basket.clear()
+    else:
+        print("Order cancelled. Your basket has been kept.")
     
 
 
@@ -74,7 +86,7 @@ def main():
     basket = []
     while True:
         show_main_menu()
-        choice = input("Choose an option (1-6): ")
+        choice = input("Choose an option (1-7): ")
 
         if choice == "1":
             display_menu(products, "Full Menu")
@@ -127,7 +139,7 @@ def main():
             break
 
         else:
-            print("\nInvalid option. Please choose a number from 1 to 5.")
+            print("\nInvalid option. Please choose a number from 1 to 7.")
         
 
 
