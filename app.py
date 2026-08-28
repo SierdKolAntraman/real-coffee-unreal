@@ -45,18 +45,6 @@ def review_basket(basket):
                 break
 
     print(f"\nTotal: €{total:.2f}")
-
-def checkout(basket):
-    if not basket:
-        print(f"Your basket is empty.")
-        return
-
-    confirm = input("\nConfirm order? (y/n): ").strip().lower()
-    if confirm == "y":
-        print("\nOrder confirmed! Thank you for choosing Real Coffee Unreal.")
-        basket.clear()
-    else:
-        print("Order cancelled. Your basket has been kept.")
     
 
 
@@ -77,7 +65,67 @@ def show_main_menu():
     print("4. View desserts")
     print("5. Order product")
     print("6. Review basket")
-    print("7. Exit")
+    print("7. Checkout")
+    print("8. Exit")
+
+def checkout(basket):
+    if not basket:
+        print("\nYour basket is empty. Add a product before checkout.")
+        return
+
+    total = sum(product["price"] for product in basket)
+
+    print(f"\nYour order total is: €{total:.2f}")
+    confirmation = input("Confirm order? (y/n): ").lower()
+
+    if confirmation == "y":
+        save_order(basket)
+        print("\nOrder confirmed. Thank you for choosing Real Coffee Unreal!")
+        basket.clear()
+    else:
+        print("\nOrder was not confirmed. Your basket is unchanged.")
+
+def load_orders():
+    try:
+        with open("data/orders.json", "r", encoding="utf-8") as file:
+            return json.load(file)
+    except FileNotFoundError:
+        return []
+
+
+def group_basket_items(basket):
+    grouped_items = {}
+
+    for product in basket:
+        name = product["name"]
+        price = product["price"]
+        quantity = grouped_items.get(name, {}).get("quantity", 0) + 1
+        grouped_items[name] = {
+            "quantity": quantity,
+            "price": price,
+            "subtotal": round(quantity * price, 2),
+        }
+
+    return grouped_items
+
+
+def save_order(basket):
+    orders = load_orders()
+    grouped_items = group_basket_items(basket)
+    total = sum(product["price"] for product in basket)
+
+    order = {
+        "order_id": len(orders) + 1,
+        "items": grouped_items,
+        "total": round(total, 2),
+        "status": "confirmed",
+    }
+
+    orders.append(order)
+
+    with open("data/orders.json", "w", encoding="utf-8") as file:
+        json.dump(orders, file, indent=2)
+
 
 
 def main():
@@ -86,7 +134,7 @@ def main():
     basket = []
     while True:
         show_main_menu()
-        choice = input("Choose an option (1-7): ")
+        choice = input("Choose an option (1-8): ")
 
         if choice == "1":
             display_menu(products, "Full Menu")
@@ -133,13 +181,16 @@ def main():
 
         elif choice == "6":
             review_basket(basket)
-                    
+
         elif choice == "7":
+            checkout(basket)
+                        
+        elif choice == "8":
             print("\nThank you for visiting Real Coffee Unreal. Goodbye!")
             break
 
         else:
-            print("\nInvalid option. Please choose a number from 1 to 7.")
+            print("\nInvalid option. Please choose a number from 1 to 8.")
         
 
 

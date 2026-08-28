@@ -1,0 +1,51 @@
+[
+  {
+    "order_id": 1,
+    "items": {
+      "Cola": {
+        "quantity": 1,
+        "price": 2.5,
+        "subtotal": 2.5
+      },
+      "Turkish Coffee": {
+        "quantity": 1,
+        "price": 3.5,
+        "subtotal": 3.5
+      },
+      "Sutlac": {
+        "quantity": 1,
+        "price": 3.9,
+        "subtotal": 3.9
+      }
+    },
+    "total": 9.9,
+    "status": "confirmed"
+  },
+  {
+    "order_id": 2,
+    "items": {
+      "Turkish Coffee": {
+        "quantity": 1,
+        "price": 3.5,
+        "subtotal": 3.5
+      },
+      "Espresso": {
+        "quantity": 1,
+        "price": 2.5,
+        "subtotal": 2.5
+      },
+      "Sutlac": {
+        "quantity": 1,
+        "price": 3.9,
+        "subtotal": 3.9
+      },
+      "Cheesecake": {
+        "quantity": 1,
+        "price": 4.2,
+        "subtotal": 4.2
+      }
+    },
+    "total": 14.1,
+    "status": "confirmed"
+  }
+]
